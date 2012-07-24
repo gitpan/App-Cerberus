@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::GeoIP;
 {
-  $App::Cerberus::Plugin::GeoIP::VERSION = '0.03';
+  $App::Cerberus::Plugin::GeoIP::VERSION = '0.04';
 }
 
 use strict;
@@ -13,11 +13,10 @@ use parent 'App::Cerberus::Plugin';
 sub init {
 #===================================
     my $self = shift;
-    my $data_file = shift
+    $self->{data} = shift
         or croak "No data file configured. \n"
         . "You can download it from: "
         . 'http://www.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz';
-    $self->{geo} = Geo::IP->open($data_file);
 }
 
 #===================================
@@ -25,8 +24,10 @@ sub request {
 #===================================
     my ( $self, $req, $response ) = @_;
     my $ip = $req->param('ip') or return;
+    my $geo = $self->{geo} ||= Geo::IP->open( $self->{data} );
+
     my %data;
-    if ( my $record = $self->{geo}->record_by_addr($ip) ) {
+    if ( my $record = $geo->record_by_addr($ip) ) {
         %data = map { $_ => $record->$_ } qw(
             country_code country_name region region_name city
             postal_code latitude longitude area_code time_zone
@@ -51,7 +52,7 @@ App::Cerberus::Plugin::GeoIP - Add geo-location information the user's IP addres
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 

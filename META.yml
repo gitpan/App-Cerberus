@@ -35,4 +35,4 @@ requires:
 resources:
   bugtracker: https://github.com/clintongormley/App-Cerberus/issues
   repository: git://github.com/clintongormley/App-Cerberus.git
-version: 0.03
+version: 0.04
