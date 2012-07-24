@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin;
 {
-  $App::Cerberus::Plugin::VERSION = '0.04';
+  $App::Cerberus::Plugin::VERSION = '0.05';
 }
 
 use strict;
@@ -41,7 +41,7 @@ App::Cerberus::Plugin - A base class for App::Cerberus plugins
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::TimeZone;
 {
-  $App::Cerberus::Plugin::TimeZone::VERSION = '0.04';
+  $App::Cerberus::Plugin::TimeZone::VERSION = '0.05';
 }
 
 use strict;
@@ -42,7 +42,7 @@ App::Cerberus::Plugin::TimeZone - Add time-zone information to App::Cerberus
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 
