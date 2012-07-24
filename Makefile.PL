@@ -16,7 +16,9 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "App-Cerberus",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "bin/cerberus.pl"
+  ],
   "LICENSE" => "perl",
   "NAME" => "App::Cerberus",
   "PREREQ_PM" => {
@@ -24,18 +26,23 @@ my %WriteMakefileArgs = (
     "Carp" => 0,
     "DateTime" => 0,
     "DateTime::TimeZone::Tzfile" => 0,
+    "File::Spec::Functions" => 0,
+    "FindBin" => 0,
     "Geo::IP" => 0,
     "HTTP::BrowserDetect" => 0,
     "JSON" => 0,
     "List::Util" => 0,
     "Net::IP::Match::Regexp" => 0,
     "Plack::Request" => 0,
+    "Plack::Runner" => 0,
+    "Pod::Usage" => 0,
     "Time::OlsonTZ::Data" => 0,
+    "YAML" => 0,
     "parent" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }

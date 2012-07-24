@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::Throttle::Memcached;
 {
-  $App::Cerberus::Plugin::Throttle::Memcached::VERSION = '0.01';
+  $App::Cerberus::Plugin::Throttle::Memcached::VERSION = '0.02';
 }
 
 use strict;
@@ -54,7 +54,7 @@ App::Cerberus::Plugin::Throttle::Memcached - A Memcached backend for the Throttl
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::BrowserDetect;
 {
-  $App::Cerberus::Plugin::BrowserDetect::VERSION = '0.01';
+  $App::Cerberus::Plugin::BrowserDetect::VERSION = '0.02';
 }
 
 use strict;
@@ -66,7 +66,7 @@ App::Cerberus::Plugin::BrowserDetect - Add user-agent information to App::Cerber
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 DESCRIPTION
 

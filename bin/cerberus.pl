@@ -44,7 +44,20 @@ unless (caller) {
 }
 return $app;
 
-# ABSTRACT: Run the Cerberus server
+# ABSTRACT: Run App::Cerberus as a server
+# PODNAME:  cerberus.pl
+
+
+__END__
+=pod
+
+=head1 NAME
+
+cerberus.pl - Run App::Cerberus as a server
+
+=head1 VERSION
+
+version 0.02
 
 =head1 USAGE
 
@@ -65,4 +78,16 @@ passed to L<cerberus.pl>
 
 See L<App::Cerberus/CONFIGURING CERBERUS> for more information.
 
+=head1 AUTHOR
+
+Clinton Gormley <drtech@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Clinton Gormley.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+

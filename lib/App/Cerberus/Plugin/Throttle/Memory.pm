@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::Throttle::Memory;
 {
-  $App::Cerberus::Plugin::Throttle::Memory::VERSION = '0.01';
+  $App::Cerberus::Plugin::Throttle::Memory::VERSION = '0.02';
 }
 
 use strict;
@@ -56,7 +56,7 @@ App::Cerberus::Plugin::Throttle::Memory - A in-memory TESTING ONLY backend for t
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 
