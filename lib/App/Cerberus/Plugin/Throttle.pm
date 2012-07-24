@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::Throttle;
 {
-  $App::Cerberus::Plugin::Throttle::VERSION = '0.02';
+  $App::Cerberus::Plugin::Throttle::VERSION = '0.03';
 }
 
 use strict;
@@ -181,7 +181,6 @@ sub request {
     else {
         $self->{store}->incr( map { $keys{$_} => $Expire{$_} } keys %keys );
     }
-    $response->{backend} = { %{ $self->{store} } };
 }
 
 #===================================
@@ -208,7 +207,7 @@ App::Cerberus::Plugin::Throttle - Throttle request rates based on IP ranges
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

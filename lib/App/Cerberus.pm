@@ -1,6 +1,6 @@
 package App::Cerberus;
 {
-  $App::Cerberus::VERSION = '0.02';
+  $App::Cerberus::VERSION = '0.03';
 }
 
 use strict;
@@ -9,7 +9,7 @@ use JSON();
 use Carp;
 use Plack::Request;
 
-our $json = JSON->new->utf8->pretty;
+our $json = JSON->new->utf8;
 
 #===================================
 sub new {
@@ -67,7 +67,7 @@ App::Cerberus - A pluggable Perl web service to preprocess web requests. Plugins
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

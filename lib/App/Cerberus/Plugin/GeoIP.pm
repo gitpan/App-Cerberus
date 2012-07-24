@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::GeoIP;
 {
-  $App::Cerberus::Plugin::GeoIP::VERSION = '0.02';
+  $App::Cerberus::Plugin::GeoIP::VERSION = '0.03';
 }
 
 use strict;
@@ -51,7 +51,7 @@ App::Cerberus::Plugin::GeoIP - Add geo-location information the user's IP addres
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 
