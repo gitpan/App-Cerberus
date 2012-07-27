@@ -4,7 +4,7 @@ NAME
     rate.
 
 VERSION
-    version 0.05
+    version 0.06
 
 DESCRIPTION
     There is a bunch of things we want to know about our web users, such as:
@@ -48,7 +48,7 @@ PLUGINS
             "latitude": "40.7167"
         }
 
-  App::Cerbrerus::Plugin::TimeZone
+  App::Cerberus::Plugin::TimeZone
     Uses Time::OlsonTZ::Data to provide the current timezone for the user,
     and it's offset from GMT.
 
@@ -163,6 +163,10 @@ RUNNING CERBERUS
         cerberus --conf /path/to/cerberus.yml
 
     See cerberus.pl for more options.
+
+SEE ALSO
+    App::Cerberus::Client
+    Dancer::Plugin::Cerberus
 
 SUPPORT
     You can find documentation for this module with the perldoc command.
