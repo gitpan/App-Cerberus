@@ -13,7 +13,6 @@ meta-spec:
   version: 1.4
 name: App-Cerberus
 requires:
-  Any::URI::Escape: 0
   Cache::Memcached::Fast: 0
   Carp: 0
   DateTime: 0
@@ -22,9 +21,7 @@ requires:
   FindBin: 0
   Geo::IP: 0
   HTTP::BrowserDetect: 0
-  HTTP::Tiny: 0
   JSON: 0
-  List::MoreUtils: 0
   List::Util: 0
   Net::IP::Match::Regexp: 0
   Plack::Request: 0
@@ -38,4 +35,4 @@ requires:
 resources:
   bugtracker: https://github.com/clintongormley/App-Cerberus/issues
   repository: git://github.com/clintongormley/App-Cerberus.git
-version: 0.06
+version: 0.07

@@ -9,7 +9,6 @@ bin/cerberus.pl
 dist.ini
 example/cerberus.yml
 lib/App/Cerberus.pm
-lib/App/Cerberus/Client.pm
 lib/App/Cerberus/Plugin.pm
 lib/App/Cerberus/Plugin/BrowserDetect.pm
 lib/App/Cerberus/Plugin/GeoIP.pm

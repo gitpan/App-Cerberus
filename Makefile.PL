@@ -22,7 +22,6 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "App::Cerberus",
   "PREREQ_PM" => {
-    "Any::URI::Escape" => 0,
     "Cache::Memcached::Fast" => 0,
     "Carp" => 0,
     "DateTime" => 0,
@@ -31,9 +30,7 @@ my %WriteMakefileArgs = (
     "FindBin" => 0,
     "Geo::IP" => 0,
     "HTTP::BrowserDetect" => 0,
-    "HTTP::Tiny" => 0,
     "JSON" => 0,
-    "List::MoreUtils" => 0,
     "List::Util" => 0,
     "Net::IP::Match::Regexp" => 0,
     "Plack::Request" => 0,
@@ -45,7 +42,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.07",
   "test" => {
     "TESTS" => "t/*.t"
   }

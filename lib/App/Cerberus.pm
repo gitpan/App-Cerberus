@@ -1,6 +1,6 @@
 package App::Cerberus;
 {
-  $App::Cerberus::VERSION = '0.06';
+  $App::Cerberus::VERSION = '0.07';
 }
 
 use strict;
@@ -67,7 +67,7 @@ App::Cerberus - A pluggable Perl web service to preprocess web requests. Plugins
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::Throttle;
 {
-  $App::Cerberus::Plugin::Throttle::VERSION = '0.06';
+  $App::Cerberus::Plugin::Throttle::VERSION = '0.07';
 }
 
 use strict;
@@ -207,7 +207,7 @@ App::Cerberus::Plugin::Throttle - Throttle request rates based on IP ranges
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 DESCRIPTION
 
