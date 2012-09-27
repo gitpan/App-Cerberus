@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::Throttle;
 {
-  $App::Cerberus::Plugin::Throttle::VERSION = '0.08';
+  $App::Cerberus::Plugin::Throttle::VERSION = '0.09';
 }
 
 use strict;
@@ -166,21 +166,21 @@ sub request {
     my %counts = $self->{store}->counts(%keys);
     my $max    = 0;
     my $reason = '';
-
+    my $count  = 0;
     for my $period ( keys %keys ) {
         next unless ( $counts{$period} || 0 ) >= $limits->{$period};
         my $sleep = $Sleep{$period}->( $self, @ts );
         next if $max >= $sleep;
+        $count  = $counts{$period};
         $max    = $sleep;
         $reason = $period;
     }
     if ($max) {
-        $response->{throttle}{sleep}  = $max;
-        $response->{throttle}{reason} = $reason;
+        $response->{throttle}{sleep}         = $max;
+        $response->{throttle}{reason}        = $reason;
+        $response->{throttle}{request_count} = $count;
     }
-    else {
-        $self->{store}->incr( map { $keys{$_} => $Expire{$_} } keys %keys );
-    }
+    $self->{store}->incr( map { $keys{$_} => $Expire{$_} } keys %keys );
 }
 
 #===================================
@@ -207,7 +207,7 @@ App::Cerberus::Plugin::Throttle - Throttle request rates based on IP ranges
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 
@@ -335,9 +335,10 @@ If a range is matched, but the limit is not exceeded, the plugin returns (eg):
 If the limit has been exceeded, the plugin returns (eg):
 
     "throttle": {
-        "range": "google",
-        "sleep": 10,
-        "reason": "second"
+        "range":         "google",
+        "reason":        "second",
+        "sleep":         10,
+        "request_count": 12
     }
 
 Or, if C<banned>:

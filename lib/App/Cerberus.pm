@@ -1,6 +1,6 @@
 package App::Cerberus;
 {
-  $App::Cerberus::VERSION = '0.08';
+  $App::Cerberus::VERSION = '0.09';
 }
 
 use strict;
@@ -67,7 +67,7 @@ App::Cerberus - A pluggable Perl web service to preprocess web requests. Plugins
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 
@@ -180,9 +180,10 @@ Different limits can be applied to different IP ranges.
 For instance:
 
     "throttle": {
-        "range": "google",
-        "sleep": 10,
-        "reason": "second"
+        "range":         "google",
+        "reason":        "second",
+        "sleep":         10,
+        "request_count": 12
     }
 
 =head1 INSTALLING CERBERUS

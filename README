@@ -4,7 +4,7 @@ NAME
     rate.
 
 VERSION
-    version 0.08
+    version 0.09
 
 DESCRIPTION
     There is a bunch of things we want to know about our web users, such as:
@@ -97,9 +97,10 @@ PLUGINS
     For instance:
 
         "throttle": {
-            "range": "google",
-            "sleep": 10,
-            "reason": "second"
+            "range":         "google",
+            "reason":        "second",
+            "sleep":         10,
+            "request_count": 12
         }
 
 INSTALLING CERBERUS
