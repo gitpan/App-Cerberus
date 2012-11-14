@@ -1,6 +1,6 @@
 package App::Cerberus::Plugin::BrowserDetect;
 {
-  $App::Cerberus::Plugin::BrowserDetect::VERSION = '0.09';
+  $App::Cerberus::Plugin::BrowserDetect::VERSION = '0.10';
 }
 
 use strict;
@@ -51,9 +51,6 @@ sub request {
 
 1;
 
-
-1;
-
 # ABSTRACT: Add user-agent information to App::Cerberus
 
 
@@ -66,7 +63,7 @@ App::Cerberus::Plugin::BrowserDetect - Add user-agent information to App::Cerber
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 DESCRIPTION
 
@@ -96,7 +93,7 @@ to Cerberus. For instance:
 
 =head1 REQUEST PARAMS
 
-Geo information is returned when an User-Agent value is passed in:
+User-Agent information is returned when an User-Agent value is passed in:
 
     curl http://host:port/?ua=Mozilla%2F5.0 (compatible%3B Googlebot%2F2.1%3B %2Bhttp%3A%2F%2Fwww.google.com%2Fbot.html)
 

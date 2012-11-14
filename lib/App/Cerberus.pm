@@ -1,6 +1,6 @@
 package App::Cerberus;
 {
-  $App::Cerberus::VERSION = '0.09';
+  $App::Cerberus::VERSION = '0.10';
 }
 
 use strict;
@@ -27,7 +27,7 @@ sub new {
         eval "require $module"
             or die "Can't load plugin ($module): $@";
 
-        my $plugin = eval { $module->new( $args ) }
+        my $plugin = eval { $module->new($args) }
             or croak "Error loading plugin ($name): $@";
 
         push @plugins, $plugin;
@@ -43,7 +43,13 @@ sub request {
 
     my $response = {};
     for my $plugin ( @{ $self->{plugins} } ) {
-        $plugin->request( $req, $response );
+        eval {
+            $plugin->request( $req, $response );
+            1;
+        }
+            or warn "Error running plugin ("
+            . ref($plugin) . "): "
+            . ( $@ || 'Unknown error' );
     }
     return [
         200,
@@ -67,7 +73,7 @@ App::Cerberus - A pluggable Perl web service to preprocess web requests. Plugins
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 DESCRIPTION
 
