@@ -47,9 +47,11 @@ return $app;
 # ABSTRACT: Run App::Cerberus as a server
 # PODNAME:  cerberus.pl
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -57,7 +59,7 @@ cerberus.pl - Run App::Cerberus as a server
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 USAGE
 
@@ -84,10 +86,9 @@ Clinton Gormley <drtech@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Clinton Gormley.
+This software is copyright (c) 2014 by Clinton Gormley.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

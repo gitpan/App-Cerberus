@@ -1,8 +1,5 @@
 package App::Cerberus::Plugin::BrowserDetect;
-{
-  $App::Cerberus::Plugin::BrowserDetect::VERSION = '0.10';
-}
-
+$App::Cerberus::Plugin::BrowserDetect::VERSION = '0.11';
 use strict;
 use warnings;
 use HTTP::BrowserDetect();
@@ -32,6 +29,7 @@ sub request {
         device    => $detect->device    || '',
         os        => $detect->os_string || '',
         is_mobile => $detect->mobile    || 0,
+        is_tablet => $detect->tablet    || 0,
         version   => {
             major => $detect->public_major   || '',
             minor => $detect->public_minor   || '',
@@ -53,9 +51,11 @@ sub request {
 
 # ABSTRACT: Add user-agent information to App::Cerberus
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -63,7 +63,7 @@ App::Cerberus::Plugin::BrowserDetect - Add user-agent information to App::Cerber
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 DESCRIPTION
 
@@ -72,14 +72,15 @@ to Cerberus. For instance:
 
     "ua": {
         "is_robot": 0,
-        "is_mobile": 1,
+        "is_mobile": 0,
+        "is_tablet": 1,
         "version": {
             "minor": ".1",
             "full": 5.1,
             "major": "5"
         },
         "browser": "safari",
-        "device": "iphone",
+        "device": "ipad",
         "browser_properties": [
             "ios",
             "iphone",
@@ -110,10 +111,9 @@ Clinton Gormley <drtech@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Clinton Gormley.
+This software is copyright (c) 2014 by Clinton Gormley.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

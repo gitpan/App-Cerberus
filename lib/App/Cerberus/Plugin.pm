@@ -1,8 +1,5 @@
 package App::Cerberus::Plugin;
-{
-  $App::Cerberus::Plugin::VERSION = '0.10';
-}
-
+$App::Cerberus::Plugin::VERSION = '0.11';
 use strict;
 use warnings;
 use Carp;
@@ -31,9 +28,11 @@ sub request {
 
 # ABSTRACT: A base class for App::Cerberus plugins
 
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -41,7 +40,7 @@ App::Cerberus::Plugin - A base class for App::Cerberus plugins
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 DESCRIPTION
 
@@ -74,10 +73,9 @@ Clinton Gormley <drtech@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Clinton Gormley.
+This software is copyright (c) 2014 by Clinton Gormley.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

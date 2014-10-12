@@ -1,8 +1,5 @@
 package App::Cerberus::Plugin::Throttle::Memory;
-{
-  $App::Cerberus::Plugin::Throttle::Memory::VERSION = '0.10';
-}
-
+$App::Cerberus::Plugin::Throttle::Memory::VERSION = '0.11';
 use strict;
 use warnings;
 
@@ -45,10 +42,11 @@ sub _expire_old {
 
 # ABSTRACT: A in-memory TESTING ONLY backend for the Throttle plugin
 
-
-
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -56,7 +54,7 @@ App::Cerberus::Plugin::Throttle::Memory - A in-memory TESTING ONLY backend for t
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 AUTHOR
 
@@ -64,10 +62,9 @@ Clinton Gormley <drtech@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Clinton Gormley.
+This software is copyright (c) 2014 by Clinton Gormley.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
